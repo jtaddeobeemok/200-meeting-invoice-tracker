@@ -16,17 +16,17 @@ import {
 
 // ── BRAND PALETTE ──
 const P = {
-  navy: "#30395C", dark: "#1A1F2B", steel: "#4A6491", mid: "#85A5CC", light: "#ADD5F7",
-  bg: "#0F1219", surface: "#161C28", surfaceAlt: "#1C2433", surfaceHover: "#212C3E",
-  border: "#283348", borderLight: "#344060",
-  text: "#E4EAF4", textSub: "#94A3BF", textDim: "#5E6F8A",
-  accent: "#85A5CC", accentBright: "#ADD5F7", accentDark: "#4A6491",
-  paid: "#5E9E82", remaining: "#6B8DC4", foundation: "#8B7BBF", retainage: "#C4976B",
-  choate: "#85A5CC", ls3p: "#6B8DC4", md: "#8B7BBF",
-  basic: "#5E9E82", consultant: "#6B8DC4", testFit: "#7A97B0", rend: "#8B7BBF",
-  ca: "#C4976B", redesign: "#C46B88", reimb: "#5E6F8A",
-  mdDesign: "#8B7BBF", mdFFE: "#C4976B", mdRend: "#7A97B0", mdHourly: "#C46B88",
-  progressTrack: "#1E2840",
+  navy: "#30395C", dark: "#F0F2F5", steel: "#4A6491", mid: "#5A7BAA", light: "#3A6B9F",
+  bg: "#F5F7FA", surface: "#FFFFFF", surfaceAlt: "#F8FAFC", surfaceHover: "#EDF2F7",
+  border: "#D8E1EC", borderLight: "#C5D1E0",
+  text: "#1A2332", textSub: "#5A6B82", textDim: "#8B9CB5",
+  accent: "#4A6491", accentBright: "#30395C", accentDark: "#4A6491",
+  paid: "#3D8B63", remaining: "#4A7BBF", foundation: "#7A63B5", retainage: "#B5843A",
+  choate: "#4A7BBF", ls3p: "#4A7BBF", md: "#7A63B5",
+  basic: "#3D8B63", consultant: "#4A7BBF", testFit: "#5A849E", rend: "#7A63B5",
+  ca: "#B5843A", redesign: "#B54A6A", reimb: "#6B7D96",
+  mdDesign: "#7A63B5", mdFFE: "#B5843A", mdRend: "#5A849E", mdHourly: "#B54A6A",
+  progressTrack: "#E2E8F0",
 };
 const vColors = { Choate: P.choate, LS3P: P.ls3p, "Meyer Davis": P.md };
 
@@ -72,7 +72,7 @@ const cssAnim = `
 }
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
   border-color: ${P.borderLight};
 }
 
@@ -110,7 +110,7 @@ const cssAnim = `
 const Tip = ({ active, payload }) => {
   if (!active || !payload?.length) return null;
   return (
-    <div style={{ background: P.surface, border: `1px solid ${P.border}`, borderRadius: 10, padding: "12px 16px", boxShadow: "0 12px 40px rgba(0,0,0,0.5)", backdropFilter: "blur(12px)" }}>
+    <div style={{ background: P.surface, border: `1px solid ${P.border}`, borderRadius: 10, padding: "12px 16px", boxShadow: "0 12px 40px rgba(0,0,0,0.1)", backdropFilter: "blur(12px)" }}>
       <p style={{ color: P.textSub, fontSize: 10, margin: 0, marginBottom: 4, textTransform: "uppercase", letterSpacing: "0.1em", fontFamily: "Outfit" }}>{payload[0].name || payload[0].payload?.name}</p>
       <p style={{ color: P.text, fontSize: 16, margin: 0, fontWeight: 600, fontFamily: "Outfit" }}>{fmt(payload[0].value)}</p>
     </div>
@@ -122,7 +122,7 @@ function AnimBar({ paid, total, height = 6, color, delay = 0 }) {
   return (
     <div style={{ width: "100%", height, background: P.progressTrack, borderRadius: height, overflow: "hidden", position: "relative" }}>
       <div className="progress-bar-animated" style={{ width: `${pct}%`, height: "100%", background: `linear-gradient(90deg, ${color}90, ${color})`, borderRadius: height, animationDelay: `${delay}s`, position: "relative" }}>
-        <div style={{ position: "absolute", inset: 0, background: `linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%)`, borderRadius: height }} />
+        <div style={{ position: "absolute", inset: 0, background: `linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)`, borderRadius: height }} />
       </div>
     </div>
   );
@@ -144,7 +144,7 @@ function Legend({ items }) {
     <div style={{ display: "flex", justifyContent: "center", gap: 16, marginTop: 10, flexWrap: "wrap" }}>
       {items.map((it, i) => (
         <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div style={{ width: 8, height: 8, borderRadius: "50%", background: it.color, boxShadow: `0 0 8px ${it.color}60` }} />
+          <div style={{ width: 8, height: 8, borderRadius: "50%", background: it.color, boxShadow: `0 0 6px ${it.color}30` }} />
           <span style={{ fontSize: 11, color: P.textSub, fontFamily: "Outfit" }}>{it.label}</span>
           <span style={{ fontSize: 11, color: P.textDim, fontFamily: "Outfit", fontWeight: 600 }}>{it.value}</span>
         </div>
@@ -182,7 +182,7 @@ function TD({ val, color }) {
 // ── LOGO ──
 const BeemokLogo = () => (
   <svg width="140" height="28" viewBox="0 0 140 28" fill="none">
-    <text x="0" y="20" fill="white" fontFamily="Playfair Display, serif" fontSize="18" fontWeight="700" letterSpacing="3">BEEMOK</text>
+    <text x="0" y="20" fill={P.text} fontFamily="Playfair Display, serif" fontSize="18" fontWeight="700" letterSpacing="3">BEEMOK</text>
     <text x="82" y="26" fill={P.mid} fontFamily="Outfit, sans-serif" fontSize="9" fontWeight="400" letterSpacing="4">CAPITAL</text>
   </svg>
 );
@@ -292,7 +292,7 @@ export default function InvoiceTracker() {
               padding: "10px 24px", borderRadius: 9, border: "none", cursor: "pointer", fontSize: 12, fontWeight: activeVendor===v?600:400, fontFamily: "Outfit",
               background: activeVendor===v ? `linear-gradient(135deg, ${P.steel}, ${P.navy})` : "transparent",
               color: activeVendor===v ? "#fff" : P.textSub,
-              boxShadow: activeVendor===v ? `0 2px 12px ${P.navy}80` : "none",
+              boxShadow: activeVendor===v ? `0 2px 12px ${P.navy}30` : "none",
             }}>{v}</button>
           ))}
         </div>
@@ -450,7 +450,7 @@ export default function InvoiceTracker() {
                     const mdOther = (inv.ffePackage||0)+(inv.mdRenderings||0)+(inv.reimbursables||0);
                     return (
                       <tr key={inv.invoiceNo+i} className="row-hover" style={{ borderBottom: `1px solid ${P.border}20` }}>
-                        {isAll && <td style={td}><span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><span style={{ width: 7, height: 7, borderRadius: "50%", background: vColors[inv.vendor], boxShadow: `0 0 6px ${vColors[inv.vendor]}50`, flexShrink: 0 }} />{inv.vendor}</span></td>}
+                        {isAll && <td style={td}><span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><span style={{ width: 7, height: 7, borderRadius: "50%", background: vColors[inv.vendor], boxShadow: `0 0 4px ${vColors[inv.vendor]}30`, flexShrink: 0 }} />{inv.vendor}</span></td>}
                         <td style={{ ...td, fontWeight: 600, color: P.text }}>{inv.invoiceNo}</td>
                         <td style={{ ...td, color: P.textSub }}>{inv.label}</td>
                         <td style={{ ...td, color: P.textSub }}>{inv.period}</td>
