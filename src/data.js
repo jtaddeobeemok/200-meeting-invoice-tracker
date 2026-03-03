@@ -17,6 +17,7 @@ export const CHOATE_INVOICES = [
   { invoiceNo: "7109-25-05", date: "2025-12-01", period: "Nov 2025", amount: 111503.83, foundation: 0, forProfit: 111503.83, label: "Pay App #5" },
   { invoiceNo: "7109-25-06", date: "2025-12-31", period: "Dec 2025", amount: 349712.26, foundation: 0, forProfit: 349712.26, label: "Pay App #6" },
   { invoiceNo: "7109-25-07", date: "2026-01-29", period: "Jan 2026", amount: 560601.34, foundation: 91719.28, forProfit: 468882.06, label: "Pay App #7" },
+  { invoiceNo: "7109-25-08", date: "2026-02-28", period: "Feb 2026", amount: 420358.37, foundation: 14932.78, forProfit: 405425.59, label: "Pay App #8" },
 ];
 
 // ── LS3P ARCHITECTURE ──
@@ -44,7 +45,7 @@ export const MD_INVOICES = [
 // ── CONTRACTS ──
 
 export const CONTRACTS = {
-  Choate: { contractValue: 16330347 },
+  Choate: { contractValue: 16434599 },
   LS3P: {
     contracted: {
       testFit: { l: "4th Floor Test Fit", c: 29250 },
