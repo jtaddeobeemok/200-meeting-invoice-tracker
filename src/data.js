@@ -40,6 +40,7 @@ export const LS3P_INVOICES = [
 export const MD_INVOICES = [
   { invoiceNo: "2025-1117-001", date: "2025-12-19", period: "Dec 2025", amount: 27500, label: "Design thru Dec 19", design: 27500, ffePackage: 0, mdRenderings: 0, designHourly: 0, reimbursables: 0 },
   { invoiceNo: "2025-1117-002", date: "2026-01-23", period: "Jan 2026", amount: 63600, label: "Design thru Dec 31", design: 17500, ffePackage: 0, mdRenderings: 2200, designHourly: 43900, reimbursables: 0 },
+  { invoiceNo: "2025-1117-003", date: "2026-02-25", period: "Feb 2026", amount: 42180, label: "Design thru Jan 2026", design: 0, ffePackage: 7680, mdRenderings: 0, designHourly: 34500, reimbursables: 0 },
 ];
 
 // ── CONTRACTS ──
