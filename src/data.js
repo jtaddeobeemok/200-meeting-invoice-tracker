@@ -33,6 +33,7 @@ export const LS3P_INVOICES = [
   { invoiceNo: "0096871", date: "2025-11-10", period: "Oct 2025", amount: 87106.25, label: "Services thru Oct 2025", testFit: 0, basicServices: 8820, consultantServices: 2430, renderings: 8000, constructionAdmin: 2117.50, spacePlanRedesign: 65738.75, reimbursables: 0 },
   { invoiceNo: "0097238", date: "2025-12-10", period: "Nov 2025", amount: 42091.75, label: "Services thru Nov 2025", testFit: 0, basicServices: 4410, consultantServices: 26000.50, renderings: 0, constructionAdmin: 2548.75, spacePlanRedesign: 9132.50, reimbursables: 0 },
   { invoiceNo: "0097766", date: "2026-01-13", period: "Dec 2025", amount: 45066.63, label: "Services thru Dec 2025", testFit: 0, basicServices: 8820, consultantServices: 10727.75, renderings: 0, constructionAdmin: 2382.50, spacePlanRedesign: 23065, reimbursables: 71.38 },
+  { invoiceNo: "0098870", date: "2026-03-13", period: "Feb 2026", amount: 79626.73, label: "Services thru Feb 2026", testFit: 0, basicServices: 0, consultantServices: 10358, renderings: 0, constructionAdmin: 16421.25, spacePlanRedesign: 52617.50, reimbursables: 229.98 },
 ];
 
 // ── MEYER DAVIS INTERIOR DESIGN ──
