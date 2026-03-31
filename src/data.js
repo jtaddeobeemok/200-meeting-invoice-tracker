@@ -18,6 +18,7 @@ export const CHOATE_INVOICES = [
   { invoiceNo: "7109-25-06", date: "2025-12-31", period: "Dec 2025", amount: 349712.26, foundation: 0, forProfit: 349712.26, label: "Pay App #6" },
   { invoiceNo: "7109-25-07", date: "2026-01-29", period: "Jan 2026", amount: 560601.34, foundation: 91719.28, forProfit: 468882.06, label: "Pay App #7" },
   { invoiceNo: "7109-25-08", date: "2026-02-28", period: "Feb 2026", amount: 420358.37, foundation: 14932.78, forProfit: 405425.59, label: "Pay App #8" },
+  { invoiceNo: "7109-25-09", date: "2026-03-30", period: "Mar 2026", amount: 727932.38, foundation: 0, forProfit: 727932.38, label: "Pay App #9" },
 ];
 
 // ── LS3P ARCHITECTURE ──
@@ -42,6 +43,7 @@ export const MD_INVOICES = [
   { invoiceNo: "2025-1117-001", date: "2025-12-19", period: "Dec 2025", amount: 27500, label: "Design thru Dec 19", design: 27500, ffePackage: 0, mdRenderings: 0, designHourly: 0, reimbursables: 0 },
   { invoiceNo: "2025-1117-002", date: "2026-01-23", period: "Jan 2026", amount: 63600, label: "Design thru Dec 31", design: 17500, ffePackage: 0, mdRenderings: 2200, designHourly: 43900, reimbursables: 0 },
   { invoiceNo: "2025-1117-003", date: "2026-02-25", period: "Feb 2026", amount: 42180, label: "Design thru Jan 2026", design: 0, ffePackage: 7680, mdRenderings: 0, designHourly: 34500, reimbursables: 0 },
+  { invoiceNo: "2025-1117-004", date: "2026-03-24", period: "Mar 2026", amount: 6647.09, label: "Design thru Feb 2026", design: 0, ffePackage: 0, mdRenderings: 0, designHourly: 4512.50, reimbursables: 2134.59 },
 ];
 
 // ── CONTRACTS ──
@@ -62,7 +64,7 @@ export const CONTRACTS = {
   MD: {
     contracted: {
       design: { l: "Conservatory Design", c: 45000 },
-      ffePackage: { l: "FF&E Package (ASR 1)", c: 36250 },
+      ffePackage: { l: "FF&E Package (ASR 1)", c: 38400 },
       mdRenderings: { l: "Renderings", c: 2200 },
     },
     get totalContracted() {
